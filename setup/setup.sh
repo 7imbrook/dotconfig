@@ -29,18 +29,20 @@ pip3 install neovim neovim-remote
 ## Clone/or move my .config into ~/.config
 echo "Removing old .config and replacing with this, pluggins will reinstall";
 rm -rf ~/.config
-mkdir ~/.config
 if git status > /dev/null ; then
     # Yeah it's cloned!
     echo "Copying local clone";
+    mkdir ~/.config
     cp -R $(git rev-parse --show-toplevel)/ ~/.config/
 else
     echo "Download .config from github...";
     curl -L https://github.com/7imbrook/dotconfig/archive/master.zip -o /tmp/config.zip -s
     unzip -n /tmp/config.zip -d ~/
-    rm -rf .config/
     mv ~/dotconfig-master ~/.config
 fi;
+
+## Setup gitconfig
+## Set Shell
 
 ## Install Plug
 ## Launch neovim and run PlugInstall with nvr
