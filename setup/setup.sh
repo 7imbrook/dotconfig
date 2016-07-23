@@ -44,10 +44,11 @@ fi;
 # TODO
 
 ## Configure iterm (and install maybe)
-# TODO 
+# TODO
 
 ## Setup gitconfig
 # TODO
+
 
 ## Install FONTS!
 # TODO
@@ -77,3 +78,9 @@ theOtherStuff &
 ## Link .zshrc
 rm ~/.zshrc
 ln ~/.config/setup/dot.zshrc ~/.zshrc
+
+## Link .gitconfig
+rm ~/.gitconfig
+ln ~/.config/setup/dot.gitconfig ~/.gitconfig
+
+
