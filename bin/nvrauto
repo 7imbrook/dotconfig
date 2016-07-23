@@ -1,0 +1,19 @@
+#! /usr/bin/env python3                                                
+import neovim                                                          
+import os                                                              
+import time                                                            
+from sys import argv                                                   
+                                                                       
+def main():                                                            
+  vim = neovim.attach('socket', path=os.environ['NVIM_LISTEN_ADDRESS'])
+  vim.command("vsp " + os.path.abspath(argv[1]))                       
+  b = vim.current.window                                               
+  try:                                                                 
+    while b.valid:                                                     
+      time.sleep(.1)                                                   
+  except(e):                                                           
+    pass                                                               
+
+if __name__ == "__main__":                                             
+  main()             
+

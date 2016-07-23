@@ -70,5 +70,10 @@ echo "Finish with the important stuff, running the post-install.sh script in set
 theOtherStuff &
 
 ## Set Shell set up oh-my-zsh maybe
-rm -rf ~/.oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# rm -rf ~/.oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#  TODO make this not stop this script from running :( 
+
+## Link .zshrc
+rm ~/.zshrc
+ln ~/.config/setup/dot.zshrc ~/.zshrc

@@ -25,6 +25,7 @@ Plug 'rking/ag.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'neomake/neomake'
+Plug 'bronson/vim-trailing-whitespace'
 call plug#end()            " required
 
 syntax on
@@ -98,4 +99,7 @@ autocmd! BufWritePost * Neomake
 
 " OS X copy buffers
 set clipboard=unnamed
+
+" Auto remote whitespace
+autocmd BufWritePre *.py :%s/\s\+$//e
 
