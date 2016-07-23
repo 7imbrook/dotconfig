@@ -10,7 +10,6 @@
 #   a. neovim
 #   b. neovim-remote
 # 5. Plug
-# 6. seil, karabiner
 # 7. zsh
 # 8. .oh-my-zsh (latest)
 
@@ -41,13 +40,25 @@ else
     mv ~/dotconfig-master ~/.config
 fi;
 
+## Configure systemprefs keyboard bindings
+# TODO
+
+## Configure iterm (and install maybe)
+# TODO 
+
 ## Setup gitconfig
-## Set Shell
+# TODO
+
+## Install FONTS!
+# TODO
+open https://github.com/adobe-fonts/source-code-pro
 
 ## Install Plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 ## Launch neovim and run PlugInstall with nvr
+# TODO
 
 ## Install fun stuff in the background, you've already waited long enough
 function theOtherStuff {
@@ -57,3 +68,7 @@ function theOtherStuff {
 }
 echo "Finish with the important stuff, running the post-install.sh script in setup in the background";
 theOtherStuff &
+
+## Set Shell set up oh-my-zsh maybe
+rm -rf ~/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
