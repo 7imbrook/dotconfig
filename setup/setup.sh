@@ -46,13 +46,9 @@ fi;
 ## Configure iterm (and install maybe)
 # TODO
 
-## Setup gitconfig
-# TODO
-
-
 ## Install FONTS!
 # TODO
-open https://github.com/adobe-fonts/source-code-pro
+# open https://github.com/adobe-fonts/source-code-pro
 
 ## Install Plug
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
@@ -60,6 +56,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 
 ## Launch neovim and run PlugInstall with nvr
 # TODO
+nvim --headless -c ':call PostInstall()' -n
 
 ## Install fun stuff in the background, you've already waited long enough
 function theOtherStuff {
@@ -70,11 +67,6 @@ function theOtherStuff {
 echo "Finish with the important stuff, running the post-install.sh script in setup in the background";
 theOtherStuff &
 
-## Set Shell set up oh-my-zsh maybe
-# rm -rf ~/.oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#  TODO make this not stop this script from running :( 
-
 ## Link .zshrc
 rm ~/.zshrc
 ln ~/.config/setup/dot.zshrc ~/.zshrc
@@ -83,4 +75,8 @@ ln ~/.config/setup/dot.zshrc ~/.zshrc
 rm ~/.gitconfig
 ln ~/.config/setup/dot.gitconfig ~/.gitconfig
 
-
+## Set Shell set up oh-my-zsh maybe
+# rm -rf ~/.oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#  TODO make this not stop this script from running :(
+#  it runs /bin/zsh at the end of it

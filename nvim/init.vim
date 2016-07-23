@@ -1,10 +1,10 @@
-set nocompatible              " be iMproved, required
-set splitright
+set nocompatible " be iMproved, required
+
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " let Vundle manage Vundle, required
 Plug 'tpope/vim-sleuth'
-Plug 'kristijanhusak/vim-hybrid-material' 
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'jacoborus/tender'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -26,15 +26,22 @@ Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'neomake/neomake'
 Plug 'bronson/vim-trailing-whitespace'
-call plug#end()            " required
+call plug#end()  " required
+
+function! PostInstall()
+  PlugInstall
+  UpdateRemotePlugins
+  qa!
+endfunction
 
 syntax on
-colorscheme tender 
+colorscheme tender
 
 " Absolute and relative line numbers
 set number
 set relativenumber
 set numberwidth=2
+set splitright
 hi CursorLineNR cterm=bold ctermfg=White
 
 " Use deoplete.
