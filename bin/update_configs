@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Updating your .config";
+cp -R $(git rev-parse --show-toplevel)/ ~/.config/
+rm -rf ~/.config/.git/
+

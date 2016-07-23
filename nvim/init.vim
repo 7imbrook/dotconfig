@@ -26,6 +26,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'neomake/neomake'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()  " required
 
 function! PostInstall()
