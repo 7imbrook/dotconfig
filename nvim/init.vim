@@ -57,6 +57,9 @@ autocmd VimResized * :wincmd =
 " Y yanks from cursor on
 map Y y$
 
+" Automatically remove whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Reselect visual block after indent
 vnoremap < <gv
 vnoremap > >gv
