@@ -1,0 +1,19 @@
+#!/bin/bash
+
+diff $DOTCONFIG_PATH/nvim/init.vim ~/.config/nvim/init.vim;
+
+read -n 1 -p "Would you like to apply this patch? [Yn]" res;
+case "$res" in
+  n)
+    exit 1;
+  ;;
+  *)
+    patch_file=$(mktemp)
+    diff $DOTCONFIG_PATH/nvim/init.vim ~/.config/nvim/init.vim > $patch_file;
+    cd $DOTCONFIG_PATH;
+    git apply $patch_file;
+  ;;
+esac
+
+
+

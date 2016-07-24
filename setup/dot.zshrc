@@ -4,6 +4,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# My stuff...
+export DOTCONFIG_PATH=~/Projects/7imbrook/dotconfig
+
 # Neovim Editor
 export PATH=$PATH:$HOME/.config/bin/
 if [[ -z $NVIM_LISTEN_ADDRESS ]]; then

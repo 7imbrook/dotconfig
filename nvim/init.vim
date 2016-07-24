@@ -111,6 +111,3 @@ autocmd! BufWritePost * Neomake
 " OS X copy buffers
 set clipboard=unnamed
 
-" Auto remote whitespace
-autocmd BufWritePre *.py :%s/\s\+$//e
-
